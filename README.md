@@ -7,6 +7,18 @@ Currently, running `python main.py` will scrape the [Ansible module index](https
 ### Expected Usage
 The current usage is not for what Ansible is intended for. The idea is that Ansible modules could be used to set up local environments for developers using the power of Ansible on a single machine, which might be overkill but oh well. This project is designed to be potentially used by [Jeff Hykin](https://github.com/jeff-hykin/) and [Rick Shaw](https://github.com/rsrickshaw) for a project of theirs.
 
+## Instructions
+
+Install the required libraries:
+
+`pip install -r requirements`
+
+Run the script (requires interent for scraping):
+
+`pyrhon main.py`
+
+All the output scripts will be output into the `ruby_wrappers` directory w/ a helper.rb file.
+
 ### Planned features
 - Getting the output of running the Ansible module and returning that as part of the Ruby function
 
