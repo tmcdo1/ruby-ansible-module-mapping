@@ -15,6 +15,7 @@ def get_module_urls():
     return url_list
 
 if __name__ == '__main__':
-    print(get_module_urls()[0])
+    print('\n'.join(get_module_urls()))
+
 
 
