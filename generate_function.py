@@ -1,7 +1,7 @@
 import os
 
 def get_function_arg_str(args):
-    return ': \'\', '.join(args)
+    return ': \'\', '.join(args) + ': \'\''
 
 # Function to generate ruby function given parameters
 def generate_function(ansible_module):
@@ -27,7 +27,7 @@ def generate_function(ansible_module):
             f'    end\n'
             f'  }}\n'
             f'  argString = createArgStr(argHash)\n'
-            f'  system(\'ansible localhost\' -m {module_name} -a "#{{argString}}")\n'
+            f'  system(\'ansible localhost -m {module_name} -a "#{{argString}}"\')\n'
             f'end'
         ))
 
